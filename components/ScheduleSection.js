@@ -1,56 +1,56 @@
 import SectionTitle from './SectionTitle'
 
-const BeginnerData = [{
-  time: "00.00 - 00.00",
-  topic: "Let's start with React in the right way",
-  speaker: "- Somkiat Puisungnoen - somkiat.cc"
-},{
-  time: "00.00 - 00.00",
-  topic: "Switching from Mobile (Native) to React Web Developer",
-  speaker: "- Chinnawat Panmongkol - Wongnai"
-},{
-  time: "00.00 - 00.00",
-  topic: "Live coding / mob programming session",
-  speaker: "- Thai Pangsakulyanont - Taskworld"
-},{
-  time: "00.00 - 00.00",
-  topic: "Angular to React without breaking things",
-  speaker: "- Jirat Kijlerdpornpailoj - Sprint3r / Gucode"
-},{
-  time: "00.00 - 00.00",
-  topic: "Workshop with Next.js",
-  speaker: "- Nati Namvong - CTO at Sellsuki"
+const beginnerData = [{
+  time: '00.00 - 00.00',
+  topic: 'Let `s start with React in the right way',
+  speaker: 'Somkiat Puisungnoen - somkiat.cc'
+}, {
+  time: '00.00 - 00.00',
+  topic: 'Switching from Mobile (Native) to React Web Developer',
+  speaker: 'Chinnawat Panmongkol - Wongnai'
+}, {
+  time: '00.00 - 00.00',
+  topic: 'Live coding / mob programming session',
+  speaker: 'Thai Pangsakulyanont - Taskworld'
+}, {
+  time: '00.00 - 00.00',
+  topic: 'Angular to React without breaking things',
+  speaker: 'Jirat Kijlerdpornpailoj - Sprint3r / Gucode'
+}, {
+  time: '00.00 - 00.00',
+  topic: 'Workshop with Next.js',
+  speaker: 'Nati Namvong - CTO at Sellsuki'
 }]
 
-const IntermediateData = [{
-  time: "00.00 - 00.00",
-  topic: "[ENG] Scalable React App Architecture",
-  speaker: "- Zack Siri - Founder at Artellectual"
-},{
-  time: "00.00 - 00.00",
-  topic: "Behavior Driven Development in React Native",
-  speaker: "- Tim Tana - CTO at Planforfit"
-},{
-  time: "00.00 - 00.00",
-  topic: "Styled Components: Change your css styling mindset! ",
-  speaker: "- Yanin Tuamsuk - Front-end Engineer at Jitta"
-},{
-  time: "00.00 - 00.00",
-  topic: "Lessons Learned from using Next.js in Production",
-  speaker: "- Panjamapong (PanJ) Sermsawatsri - CTO at TakeMeTour"
-},{
-  time: "00.00 - 00.00",
-  topic: "Testable react: patterns and comparison",
-  speaker: "- Chakrit Likitkhajorn - Lead developer at Taskworld"
+const intermediateData = [{
+  time: '00.00 - 00.00',
+  topic: '[ENG] Scalable React App Architecture',
+  speaker: 'Zack Siri - Founder at Artellectual'
+}, {
+  time: '00.00 - 00.00',
+  topic: 'Behavior Driven Development in React Native',
+  speaker: 'Tim Tana - CTO at Planforfit'
+}, {
+  time: '00.00 - 00.00',
+  topic: 'Styled Components: Change your css styling mindset! ',
+  speaker: 'Yanin Tuamsuk - Front-end Engineer at Jitta'
+}, {
+  time: '00.00 - 00.00',
+  topic: 'Lessons Learned from using Next.js in Production',
+  speaker: 'Panjamapong (PanJ) Sermsawatsri - CTO at TakeMeTour'
+}, {
+  time: '00.00 - 00.00',
+  topic: 'Testable react: patterns and comparison',
+  speaker: 'Chakrit Likitkhajorn - Lead developer at Taskworld'
 }]
 
 export default function ScheduleSection () {
   return (
     <div className='schedule-wrapper'>
       <SectionTitle>Schedule</SectionTitle>
-      <ScheduleTable track="Beginner Track" scheduleData={BeginnerData}/>
-      <br/>
-      <ScheduleTable track="Intermediate Track" scheduleData={IntermediateData}/>
+      <ScheduleTable track='Beginner Track' scheduleData={beginnerData} />
+      <br />
+      <ScheduleTable track='Intermediate Track' scheduleData={intermediateData} />
       <style jsx>{`
         .schedule-wrapper {
           text-align: center;
@@ -60,14 +60,13 @@ export default function ScheduleSection () {
   )
 }
 
-
-const ScheduleTable = ({track, scheduleData}) => {
+const ScheduleTable = ({ track, scheduleData }) => {
   return (
-    <div className="schedule-table-wrapper">
-      <table className="schedule-table">
+    <div className='schedule-table-wrapper'>
+      <table className='schedule-table'>
         <thead>
           <tr>
-            <th colSpan="2">{track}</th>
+            <th colSpan='2'>{track}</th>
           </tr>
         </thead>
         <tbody>
@@ -75,7 +74,7 @@ const ScheduleTable = ({track, scheduleData}) => {
             scheduleData.map((data, index) => (
               <tr>
                 <td>{data.time}</td>
-                <td><p>{data.topic}</p>{data.speaker}</td>
+                <td><p>{data.topic}</p>- {data.speaker}</td>
               </tr>
             ))
           }
